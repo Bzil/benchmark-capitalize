@@ -124,8 +124,7 @@ public class Capitalize {
         // LowerCase the whole string
         in = in.toLowerCase();
         final char[] buffer = in.toCharArray();
-        final char[] out = new char[length];
-        int j = 0;
+        StringBuilder sb = new StringBuilder(length);
 
         boolean delimiterFound = false;
         boolean whiteCharAfterDelimiter = true;
@@ -134,29 +133,25 @@ public class Capitalize {
             if (isDelimiter(ch)) {
                 delimiterFound = true;
                 if (!firstDelimiter) {
-                    out[j] = ch;
-                    j++;
+                    sb.append(ch);
                 }
             } else if (delimiterFound) {
                 whiteCharAfterDelimiter = ch == WHITE_CHAR;
                 delimiterFound = false;
                 if (!firstDelimiter) {
-                    out[j] = ch;
-                    j++;
+                    sb.append(ch);
                 }
                 firstDelimiter = whiteCharAfterDelimiter;
             } else if (whiteCharAfterDelimiter) {
-                out[j] = Character.toTitleCase(ch);
-                j++;
+                sb.append(Character.toTitleCase(ch));
                 whiteCharAfterDelimiter = false;
                 firstDelimiter = false;
             } else {
-                out[j] = ch;
-                j++;
+                sb.append(ch);
             }
         }
 
-        return new String(out);
+        return sb.toString();
     }
 
     public String trullyCapitalize(String in) {
