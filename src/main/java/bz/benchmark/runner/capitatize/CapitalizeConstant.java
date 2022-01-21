@@ -49,6 +49,7 @@ public class CapitalizeConstant {
 
                     new Holder("Question ? ? danger", "Question ? Danger"),
                     new Holder("Question ?  ? danger", "Question ?  ? Danger"),
+                    new Holder("Question ?\u00A0\u00A0? danger", "Question ?\u00A0\u00A0? Danger"),
                     new Holder("Question ?   ? danger", "Question ?   ? Danger"),
                     new Holder("Question ? ? ? danger", "Question ? Danger"),
                     new Holder("Point . . danger", "Point . Danger"),

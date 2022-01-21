@@ -39,9 +39,4 @@ class CapitalizeTest {
     void capitalizeNewLikeOldWayGuillaume(CapitalizeConstant.Holder holder) {
         assertThat(capitalize.capitalizeNewLikeOldWayGuillaume(holder.getInput())).isEqualTo(holder.getOutput());
     }
-
-    @Test
-    void capitalizeNewLikeOldWay2() {
-        assertThat(capitalize.capitalizeNewLikeOldWay("A lot of !!!! ??? .. ? ? ! . danger!?")).isEqualTo("A lot of !!!! ??? .. Danger!?");
-    }
 }
