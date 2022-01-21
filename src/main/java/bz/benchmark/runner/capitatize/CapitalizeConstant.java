@@ -10,13 +10,15 @@ public class CapitalizeConstant {
 
                     new Holder("!", "!"),
                     new Holder(". ", ""),
+                    new Holder(". . ", ""),
+                    new Holder(".\t", ""),
                     new Holder(" ? ", " ? "),
 
                     new Holder("H", "H"),
                     new Holder("g", "G"),
 
-                    new Holder("HELLO WORLD.", "Hello world."),
-                    new Holder("Hello World.", "Hello world."),
+                    new Holder("HELLO WORLD! ! ! ", "Hello world! "),
+                    new Holder("Hello World. ?", "Hello world. ?"),
                     new Holder("hello world.", "Hello world."),
 
                     new Holder("HELLO WORLD. LOREM IPSUM.", "Hello world. Lorem ipsum."),
@@ -40,20 +42,24 @@ public class CapitalizeConstant {
                     new Holder("Hello World", "Hello world"),
                     new Holder("hello world", "Hello world"),
 
-                    new Holder("! HELLO WORLD!", "Hello world!"),
+                    new Holder("! HELLO WORLD! ", "Hello world! "),
+                    new Holder("! HELLO WORLD ! ", "Hello world ! "),
                     new Holder("! Hello World!", "Hello world!"),
-                    new Holder("! hello world!", "Hello world!"),
+                    new Holder("!  hello world!  hello world", " hello world!  hello world"),
 
                     new Holder("Question ? ? danger", "Question ? Danger"),
+                    new Holder("Question ?  ? danger", "Question ?  ? Danger"),
+                    new Holder("Question ?   ? danger", "Question ?   ? Danger"),
                     new Holder("Question ? ? ? danger", "Question ? Danger"),
                     new Holder("Point . . danger", "Point . Danger"),
                     new Holder("Exclamation ! ! danger", "Exclamation ! Danger"),
 
                     new Holder("est.   qui dolorem ipsum", "Est.   qui dolorem ipsum"),
+                    new Holder("est.   qui dolorem ipsum. a", "Est.   qui dolorem ipsum. A"),
                     new Holder("A lot of ! ? . ? ? ! . danger!?", "A lot of ! Danger!?"),
-                    new Holder("A lot of! ? . ? ? ! . danger!?", "A lot of! Danger!?"),
+                    new Holder("A lot of! ? . ? ? ! . danger !?", "A lot of! Danger !?"),
                     new Holder("A lot of !!!! ??? .. ? ? ! . danger!?", "A lot of !!!! ??? .. Danger!?"),
-                    new Holder("!? lorem", "!? Lorem"),
+                    new Holder("!? lorem \uD83D\uDE00 \uD83D\uDE03", "!? Lorem \uD83D\uDE00 \uD83D\uDE03"),
 
                     new Holder(
                             " Neque porro quisquam ? est qui dolorem ipsum ! quia dolor sit amet. consectetur, adipisci velit… ",

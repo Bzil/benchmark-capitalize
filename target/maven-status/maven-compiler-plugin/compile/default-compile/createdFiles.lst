@@ -3,6 +3,7 @@ bz/benchmark/BenchmarkRunner.class
 bz/benchmark/runner/capitatize/CapitalizeConstant$Holder.class
 bz/benchmark/runner/capitatize/jmh_generated/CapitalizeRunner_bench_new_way_with_old_rules_jmhTest.class
 bz/benchmark/runner/capitatize/jmh_generated/CapitalizeRunner_bench_old_new_regex_jmhTest.class
+bz/benchmark/runner/capitatize/jmh_generated/CapitalizeRunner_bench_new_way_with_old_rules_guillaume_jmhTest.class
 bz/benchmark/runner/capitatize/jmh_generated/CapitalizeRunner_jmhType.class
 bz/benchmark/runner/capitatize/jmh_generated/CapitalizeRunner_jmhType_B3.class
 bz/benchmark/runner/capitatize/jmh_generated/Capitalize_jmhType.class

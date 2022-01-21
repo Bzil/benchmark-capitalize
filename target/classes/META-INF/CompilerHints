@@ -4,6 +4,7 @@ dontinline,*.*_sample_jmhStub
 dontinline,*.*_ss_jmhStub
 dontinline,*.*_thrpt_jmhStub
 inline,bz/benchmark/runner/capitatize/CapitalizeRunner.bench_new_way_with_old_rules
+inline,bz/benchmark/runner/capitatize/CapitalizeRunner.bench_new_way_with_old_rules_guillaume
 inline,bz/benchmark/runner/capitatize/CapitalizeRunner.bench_old_new_regex
 inline,bz/benchmark/runner/capitatize/CapitalizeRunner.bench_old_way
 inline,bz/benchmark/runner/capitatize/CapitalizeRunner.trully_capitalize

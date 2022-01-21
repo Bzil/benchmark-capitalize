@@ -22,12 +22,7 @@ public class Capitalize {
     }
 
     private static boolean isDelimiter(final char ch) {
-        for (final char delimiter : DELIMITER) {
-            if (ch == delimiter) {
-                return true;
-            }
-        }
-        return false;
+        return ch == '.' || ch == '?' || ch == '!';
     }
 
     public String capitalizeOld(String in) {
@@ -179,5 +174,43 @@ public class Capitalize {
             }
         }
         return new String(buffer);
+    }
+
+    public String capitalizeNewLikeOldWayGuillaume(String in) {
+        int length = in.length();
+        if (length == 0) {
+            return in;
+        }
+
+        if (length == 1) {
+            return in.toUpperCase();
+        }
+        final char[] buffer = in.toCharArray();
+        boolean capitalizeNext = true;
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < buffer.length - 1; i++) {
+            final char ch1 = buffer[i];
+            final char ch2 = buffer[i + 1];
+            if (isDelimiter(ch1) && Character.isWhitespace(ch2)) {
+                if (!capitalizeNext) {
+                    capitalizeNext = true;
+                    sb.append(ch1);
+                    sb.append(ch2);
+                }
+                if (i == buffer.length - 2) {
+                    return sb.toString(); // end reached
+                }
+                i++;
+            } else if (capitalizeNext) {
+                sb.append(Character.toUpperCase(ch1));
+                capitalizeNext = false;
+            } else {
+                sb.append(Character.toLowerCase(ch1));
+            }
+        }
+        // last char handling
+        char lastChar = buffer[buffer.length - 1];
+        sb.append(capitalizeNext ? Character.toUpperCase(lastChar) : Character.toLowerCase(lastChar));
+        return sb.toString();
     }
 }

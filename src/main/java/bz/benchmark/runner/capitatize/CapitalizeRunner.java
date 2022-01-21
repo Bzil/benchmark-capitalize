@@ -41,4 +41,11 @@ public class CapitalizeRunner {
             blackhole.consume(capitalize.trullyCapitalize(holder.getInput()));
         }
     }
+
+    @Benchmark
+    public void bench_new_way_with_old_rules_guillaume(Capitalize capitalize, Blackhole blackhole) {
+        for (CapitalizeConstant.Holder holder : TO_CAPITALIZE) {
+            blackhole.consume(capitalize.capitalizeNewLikeOldWayGuillaume(holder.getInput()));
+        }
+    }
 }
